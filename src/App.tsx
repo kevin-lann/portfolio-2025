@@ -70,7 +70,8 @@ function App() {
 
           <section id="tech" className="min-h-screen px-12 py-16">
               <div className="max-w-4xl mx-auto">
-                <h1 className="font-bold text-3xl md:text-5xl tracking-wide">
+                <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
+                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4  ">
                   Technologies I use:
                 </h1>
                 <p className="text-md font-extralight text-slate-200 my-10">
