@@ -15,7 +15,7 @@ const NavigationBar = () => {
         KEVIN LAN
       </div>
       <div className="relative group p-6 cursor-pointer"> 
-        Experience
+        <a href='#experience' className="text-inherit">Experience</a>
         <span className="absolute bottom-0 left-0 w-full h-0.5 
                   bg-gradient-to-r from-[rgba(170,144,255,0.16)] via-purple-300 to-[rgba(170,144,255,0.16)] 
                    origin-left transform scale-x-0 

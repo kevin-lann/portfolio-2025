@@ -9,9 +9,15 @@ import { SiSpringboot, SiTypescript } from 'react-icons/si'
 import { RiTailwindCssFill } from 'react-icons/ri'
 import { DiMongodb } from 'react-icons/di'
 import { BiLogoPostgresql } from 'react-icons/bi'
+import { useState } from 'react'
+import Tabs from './components/tabs/Tabs.tsx'
+
+const TABS = ['Work', 'Education']
 
 function App() {
 
+  const [tab, setTab] = useState<string>('')
+  
   return (
     <>
       <nav id="navbar" className="absolute left-1/2 -translate-x-1/2 z-1000">
@@ -49,26 +55,39 @@ function App() {
                       </div>
                     </div>
                     
-                    <div className="w-full flex flex-row gap-[36px] items-center justify-end">
-                        <a className="cursor-pointer" href='https://github.com/kevin-lann'  target="_blank" rel="noopener noreferrer">
-                          <FaGithub size={20}/>
-                        </a>
-                        <a className="cursor-pointer" href='https://www.linkedin.com/in/kevin-lan-/'  target="_blank" rel="noopener noreferrer">
-                          <FaLinkedin size={20}/>
-                        </a>
+                    <div className="w-full flex flex-row gap-[24px] items-center justify-center pt-8">
+
                         <a className="cursor-pointer" href='/resume/Kevin_Lan_Resume_2025.pdf' download target="_blank" rel="noopener noreferrer"> 
-                          <GrDocumentText size={20}/> 
+                          <button className="relative items-center overflow-hidden 
+                          transition-border ease-in-out duration-300 border border-transparent hover:border hover:border-white/15
+                          focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
+                          transition-shadow ease-in-out duration-300 hover:drop-shadow-[0_4px_20px_rgba(255,255,255,0.05)]">
+                            <div className="flex flex-row align-center gap-4 items-center relative z-10">
+                              <GrDocumentText size={20}/> <div className="">Download CV</div>
+                            </div>
+                            <div className="absolute inset-0 w-1/6 z-5 block transform -skew-x-12 
+                                bg-gradient-to-r from-transparent via-white to-transparent 
+                                opacity-10 animate-shimmer" />
+                          </button>
                         </a>
-                      
+                        <div className="flex flex-row gap-[24px]">
                         <a className="cursor-pointer" href='mailto:k.lan@mail.utoronto.ca'>
-                          <MdEmail size={20}/> 
+                            <MdEmail size={22}/>
                         </a>
+                        <a className="cursor-pointer" href='https://github.com/kevin-lann'  target="_blank" rel="noopener noreferrer">
+                          <FaGithub size={22}/>
+                        </a>
+                        <a className="cursor-pointer pr-4" href='https://www.linkedin.com/in/kevin-lan-/'  target="_blank" rel="noopener noreferrer">
+                          <FaLinkedin size={22}/>
+                        </a>
+                        </div>
+                       
                     </div>
                 </div>
               </div>
           </section>
 
-          <section id="tech" className="min-h-screen px-12 py-16">
+          <section id="tech" className="px-12 py-16">
               <div className="max-w-4xl mx-auto">
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4  ">
@@ -212,6 +231,20 @@ function App() {
               </div>
               
           </section>
+
+
+          <section id="experience" className="px-12 my-56">
+            <div className="max-w-4xl mx-auto">
+                <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
+                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4  ">
+                  My Experience
+                </h1>
+                <Tabs setTab={setTab} curTab={tab} tabs={TABS}/>
+
+            </div>
+          </section>
+
+
       </main>
     </>
   )
