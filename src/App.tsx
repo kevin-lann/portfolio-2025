@@ -12,7 +12,7 @@ import { BiLogoPostgresql } from 'react-icons/bi'
 import { useState } from 'react'
 import Tabs from './components/tabs/Tabs.tsx'
 import VerticalTimeline01 from './components/timeline/VerticalTimeline1.tsx'
-import { WORK_TIMELINE_ITEMS } from './constants/content.ts'
+import { EDUCATION_TIMELINE_ITEMS, WORK_TIMELINE_ITEMS } from './constants/content.ts'
 
 const TABS = ['Work', 'Education']
 
@@ -95,7 +95,7 @@ function App() {
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Technologies I use:
                 </h1>
-                <p className="text-md font-extralight text-slate-200 mb-10">
+                <p className="text-md font-light text-slate-300 mb-10">
                   I am experienced building using many modern tools and frameworks. The following is my preferred tech stack. It consists of a handpicked set of technologies in which I use to develop full stack applications with:
                 </p>
                 <div className="flex flex-row flex-wrap gap-[10px] justify-center">
@@ -242,17 +242,42 @@ function App() {
                   My Experience
                 </h1>
                 <Tabs setTab={setTab} curTab={tab} tabs={TABS}/>
-                <div className="w-full p-4 mt-4 border border-white/15">
+                <div className="w-full p-7 mt-4 border border-white/15 rounded-[16px]">
                   {tab === TABS[0] ? (
-                    <div className="">
+                    <div>
                       <VerticalTimeline01 items={WORK_TIMELINE_ITEMS}/>
+                      <p className="w-full text-center pt-8 text-md font-light text-slate-300 mb-2">
+                        Download <a className="underline cursor-pointer" href='/resume/Kevin_Lan_Resume_2025.pdf' download target="_blank" rel="noopener noreferrer">my full resume</a> to learn more.
+                      </p>
                     </div>
                   ) : tab === TABS[1] ? (
                     <div>
+                      <VerticalTimeline01 items={EDUCATION_TIMELINE_ITEMS}/>
+                      <p className="w-full text-center pt-8 text-md font-light text-slate-300 mb-2">
+                        Download <a className="underline cursor-pointer" href='/resume/Kevin_Lan_Resume_2025.pdf' download target="_blank" rel="noopener noreferrer">my full resume</a> to learn more.
+                      </p>
                     </div>
                   ) : <></>}
-                 </div>
+                </div>
+                
+            </div>
+          </section>
 
+          <section id="projects" className="px-12 mb-20">
+            <div className="max-w-4xl mx-auto">
+                <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
+                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
+                  Featured Projects
+                </h1>
+            </div>
+          </section>
+
+          <section id="achievements" className="px-12">
+            <div className="max-w-4xl mx-auto">
+                <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
+                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
+                  Achievements & Awards
+                </h1>
             </div>
           </section>
 

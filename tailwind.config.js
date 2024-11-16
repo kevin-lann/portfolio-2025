@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       keyframes: {
         shimmer: {
           '0%': { transform: 'translateX(-150%) skewX(-12deg)' },

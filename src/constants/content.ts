@@ -1,3 +1,7 @@
+import fptLogo from '/imgs/fpt_logo.png'
+import ontarioLogo from '/imgs/ontario_logo.png'
+import uoftLogo from '/imgs/uoft.png'
+
 export const WORK_TIMELINE_ITEMS = [
   {
     date: 'Aug 2024 - Dec 2024',
@@ -5,11 +9,12 @@ export const WORK_TIMELINE_ITEMS = [
     subtitle: 'FPT Software Canada',
     label: '',
     content: [
-      "Fortified application privacy, security, & performance by introducing a NodeJS proxy server between the frontend & backend complete with two way (AES) encryption, JWT authentication, and session cache",
-      "Built a scalable email notification service in Java Spring Boot that automated client emails triggered by in-application events, handling 100's of incoming and outgoing emails per day",
-      "Developed a PDF parsing/auto-generation tool using Apache PDFBox able to extract as well as generate pdf pages including dynamically sized image fields, greatly optimizing the client's workflow",
-      "Streamlined frontend development by >40% by designing a reusable custom UI component library from scratch using React, with a focus on backend compatibility for filters, search, sorting, and file uploads"
-    ]
+      "Fortified application security by introducing a NodeJS proxy server between the frontend & backend complete with two way (AES) encryption, and session cache",
+      "Built a scalable email notification service in Java Spring Boot that automated client emails, handling 100's of in/outgoing emails per day",
+      "Developed a PDF parsing/auto-generation tool using Apache PDFBox able to extract/generate pdf pages greatly optimizing the client's workflow",
+      "Streamlined frontend development by >40% by designing a reusable custom UI component library from scratch using React"
+    ],
+    image: fptLogo
   },
   {
     date: 'Jan 2024 - Apr 2024',
@@ -19,6 +24,23 @@ export const WORK_TIMELINE_ITEMS = [
     content: [
       "Increased sprint output by processing complex technical requirements and producing high fidelity Figma wireframes for two agile development teams of 20-30 people each",
       "Communicated and presented findings, results, and user-centric solutions during technical discussions",
-    ]
+      "Performed accessibility tests on newly developed pages and applied usability best practices for optimal user experience"
+    ],
+    image: ontarioLogo
+  }
+]
+
+export const EDUCATION_TIMELINE_ITEMS = [
+  {
+    date: 'Sep 2022 - Present',
+    title: 'University of Toronto Scarborough',
+    label: '',
+    subtitle: 'Computer Science Bsc., Entrepreneurship Specialist, 3rd year',
+    content: [
+      "Current GPA: 3.85",
+      "2 time Dean's Honor list",
+      "2 time Scarborough Frank Faubert Scholarships recepient",
+    ],
+    image: uoftLogo
   }
 ]
