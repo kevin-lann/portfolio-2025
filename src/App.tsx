@@ -11,12 +11,14 @@ import { DiMongodb } from 'react-icons/di'
 import { BiLogoPostgresql } from 'react-icons/bi'
 import { useState } from 'react'
 import Tabs from './components/tabs/Tabs.tsx'
+import VerticalTimeline01 from './components/timeline/VerticalTimeline1.tsx'
+import { WORK_TIMELINE_ITEMS } from './constants/content.ts'
 
 const TABS = ['Work', 'Education']
 
 function App() {
 
-  const [tab, setTab] = useState<string>('')
+  const [tab, setTab] = useState<string>(TABS[0])
   
   return (
     <>
@@ -58,8 +60,8 @@ function App() {
                     <div className="w-full flex flex-row gap-[24px] items-center justify-center pt-8">
 
                         <a className="cursor-pointer" href='/resume/Kevin_Lan_Resume_2025.pdf' download target="_blank" rel="noopener noreferrer"> 
-                          <button className="relative items-center overflow-hidden 
-                          transition-border ease-in-out duration-300 border border-transparent hover:border hover:border-white/15
+                          <button className="relative items-center overflow-hidden border-white/10
+                          transition-border ease-in-out duration-300 border border-transparent hover:border hover:border-white/30
                           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
                           transition-shadow ease-in-out duration-300 hover:drop-shadow-[0_4px_20px_rgba(255,255,255,0.05)]">
                             <div className="flex flex-row align-center gap-4 items-center relative z-10">
@@ -90,10 +92,10 @@ function App() {
           <section id="tech" className="px-12 py-16">
               <div className="max-w-4xl mx-auto">
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
-                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4  ">
+                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Technologies I use:
                 </h1>
-                <p className="text-md font-extralight text-slate-200 my-10">
+                <p className="text-md font-extralight text-slate-200 mb-10">
                   I am experienced building using many modern tools and frameworks. The following is my preferred tech stack. It consists of a handpicked set of technologies in which I use to develop full stack applications with:
                 </p>
                 <div className="flex flex-row flex-wrap gap-[10px] justify-center">
@@ -236,10 +238,20 @@ function App() {
           <section id="experience" className="px-12 my-56">
             <div className="max-w-4xl mx-auto">
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
-                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4  ">
+                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   My Experience
                 </h1>
                 <Tabs setTab={setTab} curTab={tab} tabs={TABS}/>
+                <div className="w-full p-4 mt-4 border border-white/15">
+                  {tab === TABS[0] ? (
+                    <div className="">
+                      <VerticalTimeline01 items={WORK_TIMELINE_ITEMS}/>
+                    </div>
+                  ) : tab === TABS[1] ? (
+                    <div>
+                    </div>
+                  ) : <></>}
+                 </div>
 
             </div>
           </section>
