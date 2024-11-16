@@ -13,6 +13,7 @@ import { useState } from 'react'
 import Tabs from './components/tabs/Tabs.tsx'
 import VerticalTimeline01 from './components/timeline/VerticalTimeline1.tsx'
 import { EDUCATION_TIMELINE_ITEMS, WORK_TIMELINE_ITEMS } from './constants/content.ts'
+import shape1 from '/imgs/shape1.svg'
 
 const TABS = ['Work', 'Education']
 
@@ -28,6 +29,14 @@ function App() {
       <main className=" min-h-screen w-screen flex flex-col justify-center overflow-hidden 
       bg-[radial-gradient(ellipse_80%_70%_at_50%_-25%,rgba(170,144,255,0.16),rgba(255,255,255,0))] 
       dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(119,224,198, 0.2),rgba(255,255,255,0))]">
+
+          <div className="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur-3xl opacity-30 pointer-events-none" aria-hidden="true">
+            <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
+          </div>
+  
+          <div className="absolute top-0 right-0 rotate-90 -translate-y-1/2 translate-x-1/4 blur-3xl opacity-40 pointer-events-none" aria-hidden="true">
+            <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
+          </div>
           
           <Particles className="absolute inset-0 pointer-events-none" quantity={45} ease={100} />
           <section className="h-screen flex items-center justify-center px-12">
@@ -235,7 +244,14 @@ function App() {
           </section>
 
 
-          <section id="experience" className="px-12 my-56">
+          <section id="experience" className="px-12 my-56 relative">
+            <div className="absolute top-0 left-0 rotate-120 -translate-x-3/4 -scale-x-100 blur-3xl opacity-20 pointer-events-none" aria-hidden="true">
+              <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
+            </div>
+    
+            <div className="absolute top-0 right-0 rotate-90 -translate-y-1/2 translate-x-2/3 blur-[128px] brightness-150 hue-rotate-[-15deg] saturation-200 opacity-20 pointer-events-none" aria-hidden="true">
+              <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
+            </div>
             <div className="max-w-4xl mx-auto">
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
