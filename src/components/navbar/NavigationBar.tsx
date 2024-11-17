@@ -23,7 +23,7 @@ const NavigationBar = () => {
                    group-hover:scale-x-100" />
       </div>
       <div className="relative group p-6 cursor-pointer"> 
-        Projects
+      <a href='#projects' className="text-inherit">Projects</a>
         <span className="absolute bottom-0 left-0 w-full h-0.5 
                   bg-gradient-to-r from-[rgba(170,144,255,0.16)] via-purple-300 to-[rgba(170,144,255,0.16)] 
                    origin-left transform scale-x-0 

@@ -1,4 +1,4 @@
-import { FaDocker, FaGit, FaGitAlt, FaGithub, FaJava, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa'
+import { FaDocker, FaGit, FaGitAlt, FaGithub, FaGlobe, FaJava, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa'
 import './App.css'
 import Particles from './components/particles/Particles.tsx'
 import { GrDocumentText } from 'react-icons/gr'
@@ -15,6 +15,8 @@ import VerticalTimeline01 from './components/timeline/VerticalTimeline1.tsx'
 import { EDUCATION_TIMELINE_ITEMS, WORK_TIMELINE_ITEMS } from './constants/content.ts'
 import shape1 from '/imgs/shape1.svg'
 import ecom from '/imgs/ecom.png'
+import playlistTransfer from '/imgs/playlisttransfer.png'
+import portfolio from '/imgs/portfolio.png'
 
 const TABS = ['Work', 'Education']
 
@@ -290,7 +292,7 @@ function App() {
                 <p className="text-md font-light text-slate-300 mb-10">
                   Here are some of my favourite projects, designed & developed with a variety of tools, frameworks, and languages.
                 </p>
-                <div className="w-full flex flex-row flex-wrap gap-[10px] justify-center">
+                <div className="w-full flex flex-row flex-wrap gap-[60px] justify-center">
                   <div className="bg-[#121212] w-[98%] rounded-[16px] p-8">
                     <p className="font-bold text-xl">Paypal-Integrated E-commerce Store</p>
                     <img src={ecom} className="rounded-[8px] my-8"/>
@@ -309,9 +311,59 @@ function App() {
                     <button className="relative items-center overflow-hidden border-white/10 mt-8
                           transition-border ease-in-out duration-200 border border-transparent hover:border hover:border-white/30 
                           transition hover:bg-[#303030]">
-                            <div className="flex flex-row align-center gap-4 items-center relative z-10">
-                              <FaGithub size={20}/> <div className="">Source code</div>
-                            </div>
+                            <a href="https://github.com/kevin-lann/EcommStore"  target="_blank" rel="noopener noreferrer">
+                              <div className="flex flex-row align-center gap-4 items-center relative z-10 text-white">
+                                <FaGithub size={20}/> <div className="">Source code</div>
+                              </div>
+                            </a>
+                    </button>
+                  </div>
+                  <div className="bg-[#121212] w-[98%] rounded-[16px] p-8">
+                    <p className="font-bold text-xl">Playlist Transfer</p>
+                    <img src={playlistTransfer} className="rounded-[8px] my-8"/>
+                    <div className="flex flex-row gap-[8px] my-4 text-sm">
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Python</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">SpotiPy (Spotify API)</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">YT music API</div>
+                    </div>
+                    <p className="font-light text-gray-400">Two way Spotify/Youtube music playlist converter tool, built with third party APIs.</p>
+                    <button className="relative items-center overflow-hidden border-white/10 mt-8
+                          transition-border ease-in-out duration-200 border border-transparent hover:border hover:border-white/30 
+                          transition hover:bg-[#303030]">
+                            <a href="https://github.com/kevin-lann/PlaylistTransfer"  target="_blank" rel="noopener noreferrer">
+                              <div className="flex flex-row align-center gap-4 items-center relative z-10 text-white">
+                                <FaGithub size={20}/> <div className="">Source code</div>
+                              </div>
+                            </a>
+                    </button>
+                  </div>
+                  <div className="bg-[#121212] w-[98%] rounded-[16px] p-8">
+                    <p className="font-bold text-xl">Portfolio 2025</p>
+                    <img src={portfolio} className="rounded-[8px] my-8"/>
+                    <div className="flex flex-row gap-[8px] my-4 text-sm">
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">React</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">TailwindCSS</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Vite</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Vercel</div>
+                    </div>
+                    <p className="font-light text-gray-400">Simple personal portoflio site with modern UI/UX. (And cool effects)</p>
+                    <button className="relative items-center overflow-hidden border-white/10 mt-8 mr-4
+                          transition-border ease-in-out duration-200 border border-transparent hover:border hover:border-white/30 
+                          transition hover:bg-[#303030]">
+                              <a href="https://github.com/kevin-lann/portfolio-2025"  target="_blank" rel="noopener noreferrer">
+                                <div className="flex flex-row align-center gap-4 items-center relative z-10 text-white">
+                                  <FaGithub size={20}/> <div className="">Source code</div>
+                                </div>
+                              </a>
+                    </button>
+                    <button className="relative items-center overflow-hidden border-white/10 mt-8
+                          transition-border ease-in-out duration-200 border border-transparent hover:border hover:border-white/30 
+                          transition hover:bg-[#303030]">
+                              <a href="https://github.com/kevin-lann/portfolio-2025"  target="_blank" rel="noopener noreferrer">
+                                <div className="flex flex-row align-center gap-4 items-center relative z-10 text-white">
+                                  <FaGlobe size={20}/> <div className="">Visit site</div>
+                                </div>
+                              </a>
                     </button>
                   </div>
                 </div>
@@ -325,7 +377,6 @@ function App() {
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Achievements & Awards
                 </h1>
-               
             </div>
           </section>
 
