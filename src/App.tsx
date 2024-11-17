@@ -14,6 +14,7 @@ import Tabs from './components/tabs/Tabs.tsx'
 import VerticalTimeline01 from './components/timeline/VerticalTimeline1.tsx'
 import { EDUCATION_TIMELINE_ITEMS, WORK_TIMELINE_ITEMS } from './constants/content.ts'
 import shape1 from '/imgs/shape1.svg'
+import ecom from '/imgs/ecom.png'
 
 const TABS = ['Work', 'Education']
 
@@ -28,7 +29,7 @@ function App() {
       </nav>
       <main className=" min-h-screen w-screen flex flex-col justify-center overflow-hidden 
       bg-[radial-gradient(ellipse_80%_70%_at_50%_-25%,rgba(170,144,255,0.16),rgba(255,255,255,0))] 
-      dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(119,224,198, 0.2),rgba(255,255,255,0))]">
+      dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(119,224,198, 0.2),rgba(255,255,255,0))] font-geist">
 
           <div className="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur-3xl opacity-30 pointer-events-none" aria-hidden="true">
             <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
@@ -284,7 +285,37 @@ function App() {
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Featured Projects
+                  {/* Paypal Ecom store, playlist transfer, Vnembassy, this portfolio*/}
                 </h1>
+                <p className="text-md font-light text-slate-300 mb-10">
+                  Here are some of my favourite projects, designed & developed with a variety of tools, frameworks, and languages.
+                </p>
+                <div className="w-full flex flex-row flex-wrap gap-[10px] justify-center">
+                  <div className="bg-[#121212] w-[98%] rounded-[16px] p-8">
+                    <p className="font-bold text-xl">Paypal-Integrated E-commerce Store</p>
+                    <img src={ecom} className="rounded-[8px] my-8"/>
+                    <div className="flex flex-row gap-[8px] my-4 text-sm">
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">React</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">TailwindCSS</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Redux</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">NodeJS</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">ExpressJS</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">MongoDB</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Paypal API</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Vite</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Postman</div>
+                    </div>
+                    <p className="font-light text-gray-400">Full scale e-commerce application complete with JWT auth, product search, admin dashboards, and Paypal intgration using Paypal's Developer API.</p>
+                    <button className="relative items-center overflow-hidden border-white/10 mt-8
+                          transition-border ease-in-out duration-200 border border-transparent hover:border hover:border-white/30 
+                          transition hover:bg-[#303030]">
+                            <div className="flex flex-row align-center gap-4 items-center relative z-10">
+                              <FaGithub size={20}/> <div className="">Source code</div>
+                            </div>
+                    </button>
+                  </div>
+                </div>
+                
             </div>
           </section>
 
@@ -294,6 +325,7 @@ function App() {
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Achievements & Awards
                 </h1>
+               
             </div>
           </section>
 

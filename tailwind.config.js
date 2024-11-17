@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
+        'geist': ['Geist', 'sans-serif'],
       },
       keyframes: {
         shimmer: {

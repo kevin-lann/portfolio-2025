@@ -26,7 +26,7 @@ export default function VerticalTimeline01({ items }: { items: TimelineItemProps
           </div>
           <div className="text-md font-bold text-slate-900 dark:text-white">{item.subtitle}</div>
           {/* Description */}
-          <ul className="ml-4 mt-2 text-slate-400 font-normal list-disc font-poppins" >
+          <ul className="ml-4 mt-2 text-slate-400 font-normal list-disc font-geist" >
             {item.content.map((line, index) => (
               <li key={index} className="p-1">{line}</li>
             ))}
