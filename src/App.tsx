@@ -15,8 +15,9 @@ import VerticalTimeline01 from './components/timeline/VerticalTimeline1.tsx'
 import { EDUCATION_TIMELINE_ITEMS, WORK_TIMELINE_ITEMS } from './constants/content.ts'
 import shape1 from '/imgs/shape1.svg'
 import ecom from '/imgs/ecom.png'
-import playlistTransfer from '/imgs/playlisttransfer.png'
+import playlistTransfer from '/imgs/playlistTransfer.png'
 import portfolio from '/imgs/portfolio.png'
+import Footer from './components/footer/footer.tsx'
 
 const TABS = ['Work', 'Education']
 
@@ -30,8 +31,7 @@ function App() {
           <NavigationBar/>
       </nav>
       <main className=" min-h-screen w-screen flex flex-col justify-center overflow-hidden 
-      bg-[radial-gradient(ellipse_80%_70%_at_50%_-25%,rgba(170,144,255,0.16),rgba(255,255,255,0))] 
-      dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(119,224,198, 0.2),rgba(255,255,255,0))] font-geist">
+      bg-[radial-gradient(ellipse_80%_40%_at_50%_-15%,rgba(170,144,255,0.16),rgba(255,255,255,0))]  font-geist">
 
           <div className="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur-3xl opacity-30 pointer-events-none" aria-hidden="true">
             <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
@@ -282,7 +282,7 @@ function App() {
             </div>
           </section>
 
-          <section id="projects" className="px-12 mb-20">
+          <section id="projects" className="px-12 mb-60">
             <div className="max-w-4xl mx-auto">
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
@@ -371,17 +371,57 @@ function App() {
             </div>
           </section>
 
-          <section id="achievements" className="px-12">
+          <section id="awards" className="px-12 mb-60">
             <div className="max-w-4xl mx-auto">
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Achievements & Awards
                 </h1>
+                <div className="w-full flex flex-row flex-wrap gap-[40px] justify-center">
+                <div className="flex flex-col bg-[#121212] w-[98%] rounded-[16px] p-8">
+
+                      <div className="flex flex row gap-[8px]">
+                        <img 
+                          src='/imgs/microsoft.png'
+                          className="object-contain mr-4 bg-slate-800 w-[60px] h-[60px] rounded-full p-0.5 aspect-square object-cover">
+                        </img>
+                        <div className="">
+                          <div className="w-full flex justify-between">
+                            <p className="font-bold text-xl">Microsoft OPS Phenomenal Hackathon</p>
+                            <time className="items-center px-2 py-1 font-bold text-sm text-[#6e62b6] bg-[#101010] rounded-full">Jan 2024</time>
+                          </div>
+                          <p className="text-md font-bold text-slate-900 dark:text-white py-2">2nd place category award</p>
+                          <p className="font-light text-gray-400">Developed a generative AI chatbot on Microsoft Copilot Studio that produced answers to questions about internal learning and development.</p>
+                            </div>
+                      </div>
+
+                    </div>
+                    <div className="flex flex-col bg-[#121212] w-[98%] rounded-[16px] p-8">
+
+                      <div className="flex flex row gap-[8px]">
+                        <img 
+                          src='/imgs/ontario_logo.png'
+                          className="mr-4 bg-slate-800 w-[60px] h-[60px] rounded-full p-0.5 aspect-square object-cover">
+                        </img>
+                        <div className="">
+                          <div className="w-full flex justify-between">
+                            <p className="font-bold text-xl">OPS LTC Student Hackathon</p>
+                            <time className="items-center px-2 py-1 font-bold text-sm text-[#6e62b6] bg-[#101010] rounded-full">Mar 2024</time>
+                          </div>
+                          <p className="text-md font-bold text-slate-900 dark:text-white py-2">2nd place overall</p>
+                          <p className="font-light text-gray-400">Designed a peer-to-peer smart parking space sharing app using full product design process, to improve parking situations near schools.</p>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
             </div>
           </section>
-
-
       </main>
+
+      <footer>
+        <Footer/>
+      </footer>
     </>
   )
 }
