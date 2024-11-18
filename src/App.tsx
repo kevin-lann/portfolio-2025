@@ -18,6 +18,7 @@ import ecom from '/imgs/ecom.png'
 import playlistTransfer from '/imgs/playlistTransfer.png'
 import portfolio from '/imgs/portfolio.png'
 import Footer from './components/footer/footer.tsx'
+import BackToTopButton from './components/back-to-top/BackToTopButton.tsx'
 
 const TABS = ['Work', 'Education']
 
@@ -100,6 +101,8 @@ function App() {
                 </div>
               </div>
           </section>
+
+          <BackToTopButton />
 
           <section id="tech" className="px-12 py-16">
               <div className="max-w-4xl mx-auto">
