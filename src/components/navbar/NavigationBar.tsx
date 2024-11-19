@@ -1,13 +1,4 @@
-
-
 const NavigationBar = () => {
-
-  const handleScroll = (elementId: string) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="flex flex-row rounded-full align-center text-sm font-mono">
