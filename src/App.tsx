@@ -19,6 +19,8 @@ import playlistTransfer from '/imgs/playlistTransfer.png'
 import portfolio from '/imgs/portfolio.png'
 import Footer from './components/footer/footer.tsx'
 import BackToTopButton from './components/back-to-top/BackToTopButton.tsx'
+import { cubicBezier, easeIn, easeInOut, motion } from "framer-motion";
+import BackgroundGrid from './components/grid/grid.tsx'
 
 const TABS = ['Work', 'Education']
 
@@ -45,16 +47,29 @@ function App() {
           <Particles className="absolute inset-0 pointer-events-none" quantity={45} ease={100} />
           <section className="h-screen flex items-center justify-center px-12">
 
-            <div id="top" className="max-w-2xl w-full">
+            <motion.div 
+              id="top" 
+              className="max-w-2xl w-full"
+              initial={{opacity: 0, y:50}}
+              animate={{opacity: 1, y:0}}
+              transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}>
                 <div className="flex flex-col align-center justify-center items-center">
                     <div className="flex flex-row gap-[60px]">
                       {/* image pfp */}
-                      <img 
-                        src={profileImg} alt="profile-img"
-                        className="bg-slate-800 w-[120px] h-[120px] rounded-full shadow-[0_10px_50px_-20px_rgba(255,255,255,0.3)] p-2 aspect-square object-cover">
-                        
-                      </img>
-                      <div className="flex flex-col text-left">
+                      <motion.button
+                        className="bg-transparent border-none focus:outline-none cursor-grab"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        whileDrag={{ scale: 0.9, rotate: 10 }}
+                        drag
+                      >
+                        <img 
+                          src={profileImg} alt="profile-img"
+                          className="select-none pointer-events-none bg-slate-800 w-[120px] h-[120px] rounded-full shadow-[0_10px_50px_-20px_rgba(255,255,255,0.3)] p-2 aspect-square object-cover">
+                          
+                        </img>
+                      </motion.button>
+                      <div className="flex flex-col text-left mt-8">
                         <h1 className=" font-extrabold text-5xl md:text-7xl bg-clip-text text-transparent 
                         bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
                           Hi, I'm Kevin
@@ -99,13 +114,18 @@ function App() {
                        
                     </div>
                 </div>
-              </div>
+              </motion.div>
           </section>
 
           <BackToTopButton />
 
           <section id="tech" className="px-12 py-16">
-              <div className="max-w-4xl mx-auto">
+              <motion.div 
+                className="max-w-4xl mx-auto"
+                initial={{opacity: 0, y:50}}
+                animate={{opacity: 1, y:0}}
+                transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
+              >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Technologies I use:
@@ -245,7 +265,7 @@ function App() {
                   </div>
 
                 </div>
-              </div>
+              </motion.div>
               
           </section>
 
@@ -258,7 +278,12 @@ function App() {
             <div className="absolute top-0 right-0 rotate-90 -translate-y-1/2 translate-x-2/3 blur-[128px] brightness-150 hue-rotate-[-15deg] saturation-200 opacity-20 pointer-events-none" aria-hidden="true">
               <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
             </div>
-            <div className="max-w-4xl mx-auto">
+            <motion.div 
+                className="max-w-4xl mx-auto"
+                initial={{opacity: 0, y:50}}
+                animate={{opacity: 1, y:0}}
+                transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
+              >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   My Experience
@@ -266,27 +291,42 @@ function App() {
                 <Tabs setTab={setTab} curTab={tab} tabs={TABS}/>
                 <div className="w-full p-7 mt-4 border border-white/15 rounded-[16px]">
                   {tab === TABS[0] ? (
-                    <div>
+                    <motion.div
+                      key={TABS[0]}
+                      initial={{opacity: 0.5}}
+                      animate={{opacity: 1}}
+                      transition={{duration: 0.3, delay: 0, ease: easeInOut}}
+                    >
                       <VerticalTimeline01 items={WORK_TIMELINE_ITEMS}/>
                       <p className="w-full text-center pt-8 text-md font-light text-slate-300 mb-2">
                         Download <a className="underline cursor-pointer" href='/resume/Kevin_Lan_Resume_2025.pdf' download target="_blank" rel="noopener noreferrer">my full resume</a> to learn more.
                       </p>
-                    </div>
+                    </motion.div>
                   ) : tab === TABS[1] ? (
-                    <div>
+                    <motion.div
+                      key={TABS[1]}
+                      initial={{opacity: 0.5}}
+                      animate={{opacity: 1}}
+                      transition={{duration: 0.3, delay: 0, ease: easeInOut}}
+                    >
                       <VerticalTimeline01 items={EDUCATION_TIMELINE_ITEMS}/>
                       <p className="w-full text-center pt-8 text-md font-light text-slate-300 mb-2">
                         Download <a className="underline cursor-pointer" href='/resume/Kevin_Lan_Resume_2025.pdf' download target="_blank" rel="noopener noreferrer">my full resume</a> to learn more.
                       </p>
-                    </div>
+                    </motion.div>
                   ) : <></>}
                 </div>
                 
-            </div>
+            </motion.div>
           </section>
 
           <section id="projects" className="px-12 mb-60">
-            <div className="max-w-4xl mx-auto">
+              <motion.div 
+                className="max-w-4xl mx-auto"
+                initial={{opacity: 0, y:50}}
+                animate={{opacity: 1, y:0}}
+                transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
+              >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Featured Projects
@@ -371,11 +411,19 @@ function App() {
                   </div>
                 </div>
                 
-            </div>
+            </motion.div>
           </section>
 
-          <section id="awards" className="px-12 mb-60">
-            <div className="max-w-4xl mx-auto">
+          <section id="awards" className="px-12 mb-60 relative">
+            <div className="z-0 absolute top-0 left-0 rotate-[60deg] -translate-y-[0px] translate-x-[100px] blur-[128px] brightness-150 hue-rotate-[15deg] opacity-30 pointer-events-none" aria-hidden="true">
+              <img src={shape1} className="max-w-none h-[300px]" width={852} height={582} alt="Illustration" />
+            </div>
+            <motion.div 
+                  className="relative max-w-4xl mx-auto"
+                  initial={{opacity: 0, y:50}}
+                  animate={{opacity: 1, y:0}}
+                  transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
+                >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
                         bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
                   Achievements & Awards
@@ -418,7 +466,7 @@ function App() {
 
                     </div>
                 </div>
-            </div>
+            </motion.div>
           </section>
       </main>
 
