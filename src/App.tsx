@@ -20,7 +20,7 @@ import { cubicBezier, easeInOut, motion } from "framer-motion";
 const shape1 = '/imgs/shape1.svg'
 const ecom = '/imgs/ecom.png'
 const profileImg = '/imgs/face.jpg'
-const playlistTransfer = '/imgs/playlistTransfer.png'
+const playlistTransfer = '/imgs/playlist_transfer.png'
 const portfolio = '/imgs/portfolio.png'
 
 const TABS = ['Work', 'Education']
