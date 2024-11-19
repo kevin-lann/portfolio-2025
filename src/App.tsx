@@ -45,7 +45,7 @@ function App() {
           </div>
           
           <Particles className="absolute inset-0 pointer-events-none" quantity={45} ease={100} />
-          <section className="h-screen flex items-center justify-center px-12">
+          <section className="h-screen flex items-center justify-center">
 
             <motion.div 
               id="top" 
@@ -57,7 +57,7 @@ function App() {
                     <div className="flex flex-row gap-[60px]">
                       {/* image pfp */}
                       <motion.button
-                        className="bg-transparent border-none focus:outline-none cursor-grab"
+                        className="bg-transparent border-none focus:outline-none cursor-grab m-0 p-0"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         whileDrag={{ scale: 0.9, rotate: 10 }}
@@ -127,7 +127,8 @@ function App() {
                 transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
               >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
-                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
+                        bg-gradient-to-l from-slate-200  via-slate-200 to-slate-200 pb-4 mb-6
+                        [text-shadow:0_0_20px_rgba(200,40,200,0.15)]">
                   Technologies I use:
                 </h1>
                 <p className="text-md font-light text-slate-300 mb-10">
@@ -285,7 +286,8 @@ function App() {
                 transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
               >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
-                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
+                        bg-gradient-to-l from-slate-200  via-slate-200 to-slate-200 pb-4 mb-6
+                        [text-shadow:0_0_20px_rgba(200,40,200,0.15)]">
                   My Experience
                 </h1>
                 <Tabs setTab={setTab} curTab={tab} tabs={TABS}/>
@@ -328,7 +330,8 @@ function App() {
                 transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
               >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
-                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
+                        bg-gradient-to-l from-slate-200  via-slate-200 to-slate-200 pb-4 mb-6
+                        [text-shadow:0_0_20px_rgba(200,40,200,0.15)]">
                   Featured Projects
                   {/* Paypal Ecom store, playlist transfer, Vnembassy, this portfolio*/}
                 </h1>
@@ -388,6 +391,7 @@ function App() {
                       <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">TailwindCSS</div>
                       <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Vite</div>
                       <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Vercel</div>
+                      <div className="text-center bg-[#202020] rounded-[8px] py-1 px-3">Motion</div>
                     </div>
                     <p className="font-light text-gray-400">Simple personal portoflio site with modern UI/UX. (And cool effects)</p>
                     <button className="relative items-center overflow-hidden border-white/10 mt-8 mr-4
@@ -425,7 +429,8 @@ function App() {
                   transition={{ duration: 0.3, delay: 0, ease: cubicBezier(.35,.17,.3,.16)}}
                 >
                 <h1 className="font-extrabold text-3xl md:text-5xl tracking-wide bg-clip-text text-transparent 
-                        bg-gradient-to-l from-slate-200/80  via-slate-200 to-slate-200/70 pb-4 mb-6">
+                        bg-gradient-to-l from-slate-200  via-slate-200 to-slate-200 pb-4 mb-6
+                        [text-shadow:0_0_20px_rgba(200,40,200,0.15)]">
                   Achievements & Awards
                 </h1>
                 <div className="w-full flex flex-row flex-wrap gap-[40px] justify-center">
