@@ -1,4 +1,4 @@
-import { FaDocker, FaGit, FaGitAlt, FaGithub, FaGlobe, FaJava, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa'
+import { FaDocker, FaGitAlt, FaGithub, FaGlobe, FaJava, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa'
 import './App.css'
 import Particles from './components/particles/Particles.tsx'
 import { GrDocumentText } from 'react-icons/gr'
@@ -19,8 +19,7 @@ import playlistTransfer from '/imgs/playlistTransfer.png'
 import portfolio from '/imgs/portfolio.png'
 import Footer from './components/footer/footer.tsx'
 import BackToTopButton from './components/back-to-top/BackToTopButton.tsx'
-import { cubicBezier, easeIn, easeInOut, motion } from "framer-motion";
-import BackgroundGrid from './components/grid/grid.tsx'
+import { cubicBezier, easeInOut, motion } from "framer-motion";
 
 const TABS = ['Work', 'Education']
 
