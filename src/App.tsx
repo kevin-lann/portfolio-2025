@@ -3,7 +3,6 @@ import './App.css'
 import Particles from './components/particles/Particles.tsx'
 import { GrDocumentText } from 'react-icons/gr'
 import NavigationBar from './components/navbar/NavigationBar.tsx'
-import profileImg from '/imgs/face.jpg'
 import { MdEmail } from 'react-icons/md'
 import { SiSpringboot, SiTypescript } from 'react-icons/si'
 import { RiTailwindCssFill } from 'react-icons/ri'
@@ -13,13 +12,16 @@ import { useState } from 'react'
 import Tabs from './components/tabs/Tabs.tsx'
 import VerticalTimeline01 from './components/timeline/VerticalTimeline1.tsx'
 import { EDUCATION_TIMELINE_ITEMS, WORK_TIMELINE_ITEMS } from './constants/content.ts'
-import shape1 from '/imgs/shape1.svg'
-import ecom from '/imgs/ecom.png'
-import playlistTransfer from '/imgs/playlistTransfer.png'
-import portfolio from '/imgs/portfolio.png'
+
 import Footer from './components/footer/footer.tsx'
 import BackToTopButton from './components/back-to-top/BackToTopButton.tsx'
 import { cubicBezier, easeInOut, motion } from "framer-motion";
+
+const shape1 = '/imgs/shape1.svg'
+const ecom = '/imgs/ecom.png'
+const profileImg = '/imgs/face.jpg'
+const playlistTransfer = '/imgs/playlistTransfer.png'
+const portfolio = '/imgs/portfolio.png'
 
 const TABS = ['Work', 'Education']
 

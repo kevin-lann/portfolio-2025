@@ -1,6 +1,6 @@
-import fptLogo from '/imgs/fpt_logo.png'
-import ontarioLogo from '/imgs/ontario_logo.png'
-import uoftLogo from '/imgs/uoft.png'
+const fptLogo = '/imgs/fpt_logo.png'
+const ontarioLogo = '/imgs/ontario_logo.png'
+const uoftLogo = '/imgs/uoft.png'
 
 export const WORK_TIMELINE_ITEMS = [
   {
