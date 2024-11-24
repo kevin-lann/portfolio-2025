@@ -26,10 +26,11 @@ const BackToTopButton = () => {
   return (
     <>
       {isVisible && 
-          <a href="#navbar" className="fixed bottom-8 right-8 cursor-pointer">
-            <button className="relative items-center overflow-hidden border-white/10 mt-8 rounded-full aspect-square
+          <a href="#navbar" className="fixed bottom-12 right-16 cursor-pointer">
+            <button className="flex flex-row align-center gap-4 items-center overflow-hidden border-white/10 mt-8 rounded-full text-slate-100
                               transition-border ease-in-out duration-200 border border-transparent hover:border hover:border-white/30 
                               transition hover:bg-[#303030]">
+                <div>Back to top</div>
                 <FaArrowUp size={20}/>
             </button>
           </a>
