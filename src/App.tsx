@@ -30,7 +30,7 @@ function App() {
   const [tab, setTab] = useState<string>(TABS[0])
   
   return (
-    <>
+    <div className="dark">
       <nav id="navbar" className="absolute left-1/2 -translate-x-1/2 z-1000">
           <NavigationBar/>
       </nav>
@@ -447,7 +447,7 @@ function App() {
                             <p className="font-bold text-xl">Microsoft OPS Phenomenal Hackathon</p>
                             <time className="items-center px-2 py-1 font-bold text-sm text-[#6e62b6] bg-[#101010] rounded-full">Jan 2024</time>
                           </div>
-                          <p className="text-md font-bold text-slate-900 dark:text-white py-2">2nd place category award</p>
+                          <p className="text-md font-bold text-slate-900 text-white py-2">2nd place category award</p>
                           <p className="font-light text-gray-400">Developed a generative AI chatbot on Microsoft Copilot Studio that produced answers to questions about internal learning and development.</p>
                             </div>
                       </div>
@@ -465,7 +465,7 @@ function App() {
                             <p className="font-bold text-xl">OPS LTC Student Hackathon</p>
                             <time className="items-center px-2 py-1 font-bold text-sm text-[#6e62b6] bg-[#101010] rounded-full">Mar 2024</time>
                           </div>
-                          <p className="text-md font-bold text-slate-900 dark:text-white py-2">2nd place overall</p>
+                          <p className="text-md font-bold text-slate-900 text-white py-2">2nd place overall</p>
                           <p className="font-light text-gray-400">Designed a peer-to-peer smart parking space sharing app using full product design process, to improve parking situations near schools.</p>
                         </div>
                       </div>
@@ -479,7 +479,7 @@ function App() {
       <footer>
         <Footer/>
       </footer>
-    </>
+    </div>
   )
 }
 

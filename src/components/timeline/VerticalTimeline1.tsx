@@ -21,10 +21,10 @@ export default function VerticalTimeline01({ items }: { items: TimelineItemProps
                 src={item?.image ?? ''}
                 className="sm:absolute left-0 translate-y-0.5 bg-slate-800 w-[60px] h-[60px] rounded-full p-0.5 aspect-square object-cover">
             </img>
-            <div className="text-xl font-bold text-slate-900 dark:text-white">{item.title}</div>
+            <div className="text-xl font-bold text-slate-900 text-white">{item.title}</div>
             <time className="items-center ml-auto mr-0 px-2 py-1 font-bold text-sm text-[#6e62b6] bg-[#101010] rounded-full">{item.date}</time>
           </div>
-          <div className="text-md font-bold text-slate-900 dark:text-white">{item.subtitle}</div>
+          <div className="text-md font-bold text-slate-900 text-white">{item.subtitle}</div>
           {/* Description */}
           <ul className="ml-4 mt-2 text-slate-400 font-normal list-disc font-geist" >
             {item.content.map((line, index) => (
