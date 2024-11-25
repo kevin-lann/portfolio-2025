@@ -1,5 +1,5 @@
 # Portfolio 2025
-Visit site at: [https://kevinlan.vercel.app/](https://kevinlan.vercel.app/){:target="_blank"}
+Visit site at: <a href="https://kevinlan.vercel.app/" target="_blank">https://kevinlan.vercel.app/</a>
 
 ## React + TypeScript + Vite
 
