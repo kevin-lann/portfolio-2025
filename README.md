@@ -1,7 +1,7 @@
 # Portfolio 2025
 Visit site at: <a href="https://kevinlan.vercel.app/" target="_blank">https://kevinlan.vercel.app/</a>
 
-![Thumbnail](/public/imgs/portfolio.png)
+<img style="border-radius:8px;" src="/public/imgs/portfolio.png"/>
 
 ## React + TypeScript + Vite
 
