@@ -31,7 +31,7 @@ function App() {
   
   return (
     <div className="dark">
-      <nav id="navbar" className="absolute left-1/2 -translate-x-1/2 z-1000">
+      <nav id="navbar" className="absolute left-1/2 -translate-x-1/2 z-20">
           <NavigationBar/>
       </nav>
       <main className=" min-h-screen w-screen flex flex-col justify-center overflow-hidden 
@@ -40,11 +40,11 @@ function App() {
           <Particles className="absolute inset-0 pointer-events-none" quantity={45} ease={100} />
           <section className="h-screen flex items-center justify-center relative">
 
-            <div className="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur-3xl opacity-30 pointer-events-none" aria-hidden="true">
+            <div className="absolute z-10 top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur-3xl opacity-30 pointer-events-none" aria-hidden="true">
               <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
             </div>
     
-            <div className="absolute top-0 right-0 rotate-90 -translate-y-1/2 translate-x-1/4 blur-3xl opacity-40 pointer-events-none" aria-hidden="true">
+            <div className="absolute z-10 top-0 right-0 rotate-90 -translate-y-1/2 translate-x-1/4 blur-3xl opacity-40 pointer-events-none" aria-hidden="true">
               <img src={shape1} className="max-w-none" width={852} height={582} alt="Illustration" />
             </div>
 
