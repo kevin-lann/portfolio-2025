@@ -1,4 +1,9 @@
-# React + TypeScript + Vite
+# Portfolio 2025
+Visit site at: <a href="https://kevinlan.vercel.app/" target="_blank">https://kevinlan.vercel.app/</a>
+
+<img style="border-radius:8px;" src="/public/imgs/portfolio.png"/>
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
